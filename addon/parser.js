@@ -20,7 +20,7 @@ class Parser {
         let currentModel = current.model;
         let currentField = current.field;
 
-        currentField.selectionSet.push(new Type.Field('id'));
+        currentField.selectionSet.push(new Type.Field(`${current.name.slice(0,1)}id`));
 
         /*jshint loopfunc: true */
         currentModel.eachAttribute((attr) => {
